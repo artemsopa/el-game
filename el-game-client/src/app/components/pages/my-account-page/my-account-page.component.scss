@@ -1,0 +1,383 @@
+.itempay {
+    background-color: rgb(253, 253, 253) !important;
+}
+
+.butsdelc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listtt {
+    margin-top: -40px;
+    body{margin-top:20px;
+        background-color: #e4e6e9;
+        color: #41464d;
+    }
+    
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+    .btn-a-brc-tp:not(.disabled):not(:disabled).active, .btn-brc-tp, .btn-brc-tp:focus:not(:hover):not(:active):not(.active):not(.dropdown-toggle), .btn-h-brc-tp:hover, .btn.btn-f-brc-tp:focus, .btn.btn-h-brc-tp:hover {
+        border-color: transparent;
+    }
+    .btn-outline-blue {
+        color: #0d6ce1;
+        border-color: #5a9beb;
+        background-color: transparent;
+    }
+    .btn {
+        cursor: pointer;
+        position: relative;
+        z-index: auto;
+        border-radius: .175rem;
+        transition: color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s;
+    }
+    .border-2 {
+        border-width: 2px!important;
+        border-style: solid!important;
+        border-color: transparent;
+    }
+    .bgc-white {
+        background-color: #fff!important;
+    }
+    
+    
+    .text-green-d1 {
+        color: #277b5d!important;
+    }
+    .letter-spacing {
+        letter-spacing: .5px!important;
+    }
+    .font-bolder, .text-600 {
+        font-weight: 600!important;
+    }
+    .text-170 {
+        font-size: 1.7em!important;
+    }
+    
+    .text-purple-d1 {
+        color: #6d62b5!important;
+    }
+    
+    .text-primary-d1 {
+        color: #276ab4!important;
+    }
+    .text-secondary-d1 {
+        color: #5f718b!important;
+    }
+    .text-180 {
+        font-size: 1.8em!important;
+    }
+    .text-150 {
+        font-size: 1.5em!important;
+    }
+    .text-danger-m3 {
+        color: #e05858!important;
+    }
+    .rotate-45 {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .position-l {
+        left: 0;
+    }
+    .position-b, .position-bc, .position-bl, .position-br, .position-center, .position-l, .position-lc, .position-r, .position-rc, .position-t, .position-tc, .position-tl, .position-tr {
+        position: absolute!important;
+        display: block;
+    }
+    .mt-n475, .my-n475 {
+        margin-top: -2.5rem!important;
+    }
+    .ml-35, .mx-35 {
+        margin-left: 1.25rem!important;
+    }
+    
+    .text-dark-l1 {
+        color: #56585e!important;
+    }
+    .text-90 {
+        font-size: .9em!important;
+    }
+    .text-left {
+        text-align: left!important;
+    }
+    
+    .mt-25, .my-25 {
+        margin-top: .75rem!important;
+    }
+    
+    .text-110 {
+        font-size: 1.1em!important;
+    }
+    
+    .deleted-text{
+    text-decoration:line-through;;    
+    }
+    
+}
+
+input {
+    background-color: rgb(250, 250, 250);
+}
+
+.gtshp:hover {
+    cursor: pointer;
+    color: var(--mainColor);
+    text-decoration: underline;
+}
+
+.usercol {
+    display: flex;
+    justify-content: space-around;
+
+    .form-group {
+        width: 400px;
+    }
+}
+
+.lgout {
+    background-color: rgb(95, 95, 95) !important;
+}
+
+.userinp {
+    display: flex;
+    justify-content: space-between;
+    button {
+        margin: 5px !important;
+    }
+}
+
+.login-form {
+    padding-right: 15px;
+
+    h2 {
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+    form {
+        .form-group {
+            margin-bottom: 25px;
+
+            label {
+                display: block;
+                font-weight: 500;
+                margin-bottom: 12px;
+            }
+        }
+        .remember-me-wrap {
+            margin-bottom: 0;
+
+            .form-check {
+                margin-bottom: 0;
+                color: var(--blackColor);
+    
+                .form-check-input {
+                    margin-top: .15em;
+                    box-shadow: unset !important;
+    
+                    &[type=checkbox] {
+                        border-radius: 0;
+                    }
+                    &:checked {
+                        background-color: var(--mainColor);
+                        border-color: var(--mainColor);
+                    }
+                    &:focus {
+                        border-color: var(--mainColor);
+                    }
+                }
+            }
+        }
+        .lost-your-password-wrap {
+            text-align: end;
+
+            a {
+                display: inline-block;
+                position: relative;
+                line-height: 1.5;
+
+                &::before {
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    content: '';
+                    position: absolute;
+                    transition: var(--transition);
+                    background-color: #eeeeee;
+                }
+                &::after {
+                    width: 0;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    transition: var(--transition);
+                    bottom: 0;
+                    content: '';
+                    background-color: var(--mainColor);
+                }
+                &:hover {
+                    &::before {
+                        width: 0;
+                    }
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        button {
+            border: none;
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: var(--whiteColor);
+            background-color: var(--mainColor);
+            transition: var(--transition);
+            border-radius: 5px;
+            padding: 14px 30px;
+            width: 100%;
+            font: {
+                weight: 700;
+                size: var(--fontSize);
+            };
+            &:hover {
+                background-color: var(--blackColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+.register-form {
+    padding-left: 15px;
+
+    h2 {
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+    form {
+        .form-group {
+            margin-bottom: 25px;
+
+            label {
+                display: block;
+                font-weight: 500;
+                margin-bottom: 12px;
+            }
+        }
+        .description {
+            font: {
+                style: italic;
+                size: 14.5px;
+            };
+            margin: {
+                top: -10px;
+                bottom: 0;
+            };
+        }
+        button {
+            border: none;
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: var(--whiteColor);
+            background-color: var(--mainColor);
+            transition: var(--transition);
+            border-radius: 5px;
+            padding: 14px 30px;
+            width: 100%;
+            font: {
+                weight: 700;
+                size: var(--fontSize);
+            };
+            &:hover {
+                background-color: var(--blackColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+    
+    .login-form {
+        padding-right: 0;
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    }
+    .register-form {
+        padding-left: 0;
+        margin-top: 30px;
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .login-form {
+        padding-right: 0;
+        margin-bottom: 30px;
+
+        h2 {
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        form {
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .register-form {
+        padding-left: 0;
+
+        h2 {
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        form {
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    .login-form {
+        padding-right: 0;
+    }
+    .register-form {
+        padding-left: 0;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+}

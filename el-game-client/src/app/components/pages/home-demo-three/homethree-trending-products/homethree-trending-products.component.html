@@ -1,0 +1,95 @@
+<div class="products-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="products-image" *ngFor="let Content of bgImage;" style="background-image: url({{Content.img}});">
+                    <img src="assets/img/girl.jpg" alt="girl">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="products-content">
+                    <h2>Trending Products</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    <div class="products-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="single-products-item">
+                                    <div class="image">
+                                        <a routerLink="/products-details" class="d-block">
+                                            <img src="assets/img/products/products20.jpg" alt="products-image">
+                                        </a>
+                                        <ul class="products-button">
+                                            <li>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView">
+                                                    <i class="fas fa-search-plus"></i>
+                                                    <span class="tooltip-label">Quick View</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a routerLink="/compare">
+                                                    <i class="fas fa-exchange-alt"></i>
+                                                    <span class="tooltip-label">Compare</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a routerLink="/wishlist">
+                                                    <i class="far fa-heart"></i>
+                                                    <span class="tooltip-label">Add to Wishlist</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <h3><a routerLink="/products-details">Mesh lined snowboard</a></h3>
+                                        <a routerLink="/cart" class="add-to-cart-btn">Add to cart <i class="fas fa-cart-plus"></i></a>
+                                        <div class="price">
+                                            <span class="new-price">$158.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="single-products-item">
+                                    <div class="image">
+                                        <a routerLink="/products-details" class="d-block">
+                                            <img src="assets/img/products/products21.jpg" alt="products-image">
+                                        </a>
+                                        <ul class="products-button">
+                                            <li>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView">
+                                                    <i class="fas fa-search-plus"></i>
+                                                    <span class="tooltip-label">Quick View</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a routerLink="/compare">
+                                                    <i class="fas fa-exchange-alt"></i>
+                                                    <span class="tooltip-label">Compare</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a routerLink="/wishlist">
+                                                    <i class="far fa-heart"></i>
+                                                    <span class="tooltip-label">Add to Wishlist</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <h3><a routerLink="/products-details">Pullover ecosmart hooded</a></h3>
+                                        <a routerLink="/cart" class="add-to-cart-btn">Add to cart <i class="fas fa-cart-plus"></i></a>
+                                        <div class="price">
+                                            <span class="old-price">$521.00</span>
+                                            <span class="new-price">$399.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a routerLInk="/shop-right-sidebar-1" class="link-btn"><i class="fas fa-store"></i> VIEW ALL TRENDING PRODUCTS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

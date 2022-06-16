@@ -1,0 +1,12 @@
+<div class="subscribe-area ptb-100">
+    <div class="container">
+        <div class="subscribe-text">
+            <h2>Inscrivez-vous maintenant et obtenez 10% de réduction</h2>
+            <p>Nous vous enverrons un code spécial pour vous.</p>
+            <form [formGroup]="myForm" class="newsletter-form">
+                <input formControlName="email" type="email" class="input-newsletter" placeholder="Entrez votre adresse email">
+                <button (click)="subscribe()"><i class="far fa-paper-plane"></i>ABONNEZ-VOUS MAINTENANT</button>
+            </form>
+        </div>
+    </div>
+</div>

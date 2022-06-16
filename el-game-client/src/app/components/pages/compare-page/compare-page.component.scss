@@ -1,0 +1,101 @@
+.compare-table {
+    .table {
+        margin-bottom: 0;
+
+        thead {
+            tr {
+                border-color: #ebeeee;
+
+                th {
+                    padding: 15px 20px;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    font-size: var(--fontSize);
+                    color: var(--optionalColor);
+
+                    .compare-remove-btn {
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        color: var(--optionalColor);
+
+                        &:hover {
+                            color: var(--mainColor);
+                        }
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                border-color: #ebeeee;
+
+                td {
+                    padding: 15px 20px;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    font-size: var(--fontSize);
+                    color: var(--optionalColor);
+
+                    .btn-add-to-cart {
+                        font-size: 14px;
+                        position: relative;
+                        padding-left: 23px;
+
+                        i {
+                            position: absolute;
+                            top: 2px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .compare-table {
+        .table {
+            margin-bottom: 0;
+
+            thead {
+                tr {    
+                    th {
+                        padding: 15px;
+                    }
+                }
+            }
+            tbody {
+                tr {    
+                    td {
+                        padding: 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+}

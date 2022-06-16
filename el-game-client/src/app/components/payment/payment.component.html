@@ -1,0 +1,90 @@
+<div class="checkout">
+    <div class="credit-card-box">
+        <div class="flip">
+            <div class="front">
+                <div class="chip"></div>
+                <div class="number">{{ myForm.controls["cardNum"].value }}</div>
+                <div class="card-holder">
+                    <label>Titulaire de la carte</label>
+                    <div>{{ myForm.controls["holder"].value }}</div>
+                </div>
+                <div class="card-expiration-date">
+                    <label>Expire</label>
+                    <div>{{ myForm.controls["date"].value }}</div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="strip"></div>
+                <div class="ccv">
+                    <label>CVV</label>
+                    <div class="cvvnumb">{{ myForm.controls["cvv"].value }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="opss" *ngIf="!verify && !isverified">
+        <form class="form" [formGroup]="myForm">
+            <fieldset>
+                <label for="card-holder">Titulaire de la carte</label>
+                <input formControlName="holder"  maxlength="19" type="text" id="card-holder" placeholder="TON NOM COMPLET" />
+            </fieldset>
+            <fieldset>
+                <label for="card-holder">Numéro de carte*</label>
+                <input formControlName="cardNum" type="text" id="card-holder" maxlength="19"
+                    placeholder="**** **** **** ****" />
+            </fieldset>
+            <fieldset class="fieldset-expiration">
+                <label for="card-expiration-month">Date d'expiration*</label>
+                <input formControlName="date" type="text" id="card-ccv" maxlength="5" placeholder="MM/YY" />
+            </fieldset>
+            <fieldset class="fieldset-ccv">
+                <label for="card-ccv">CVV*</label>
+                <input formControlName="cvv" type="text" id="card-ccv" maxlength="3" placeholder="***" />
+            </fieldset>
+            <button class="btn" (click)="addCard()"><i class="fa fa-lock"></i> payer €{{total}}</button>
+        </form>
+    </div>
+    <div class="opss" *ngIf="verify && !isverified">
+        <form class="form" [formGroup]="myForm">
+            <fieldset>
+                <label for="code-holder">Entrez le code de vérification</label>
+                <input formControlName="code" type="text" id="code-holder" placeholder="Votre code" />
+            </fieldset>
+            <div id="timer" class="flex-wrap justify-content-center d-flex">
+
+                <div id="minutes" class="align-items-center flex-column d-flex justify-content-center">{{minutes}}
+                    <span>Minutes</span>
+                </div>
+                <div id="seconds" class="align-items-center flex-column d-flex justify-content-center">{{seconds}}
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <div *ngIf="!isTimerOut">
+                <button class="btn bver" (click)="updateCard()"><i class="fa fa-lock"></i> vérifier</button>
+            </div>
+            <div *ngIf="isTimerOut">
+                <button class="btn btimever" (click)="NewTimer()"><i class="fa fa-lock"></i> obtenir un nouveau code</button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="isverified" id="seconds" class="vire align-items-center flex-column d-flex justify-content-center">Merci pour la commande!
+        <span>Nous vous contacterons.</span>
+        <br>
+    </div>
+    
+    <div *ngIf="spinny != 0" class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="spinny == 0 && isverified" class="d-flex justify-content-center">
+        <div class="col-lg-6 col-md-5">
+            <ul class="page-title-content">
+                <li><a routerLink="/">Retour à la page d'accueil</a></li>
+            </ul>
+        </div>
+    </div>
+<br>
+<br>
+<br>

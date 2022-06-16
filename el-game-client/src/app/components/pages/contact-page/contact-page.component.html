@@ -1,0 +1,104 @@
+<!-- Page Title -->
+<div class="page-title-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-7">
+                <h2>Nous contacter</h2>
+            </div>
+            <div class="col-lg-6 col-md-5">
+                <ul class="page-title-content">
+                    <li><a routerLink="/">ACCUEIL</a></li>
+                    <li>Nous contacter</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="contact-area ptb-100">
+    <div class="container">
+        <div class="contact-form-area">
+            <div class="row m-0">
+                <div class="col-lg-8 col-md-12 p-0">
+                    <div class="contact-form">
+                        <h3>Envoie-nous un message</h3>
+                        <form [formGroup]="myForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Votre nom</label>
+                                        <input formControlName="name" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Adresse e-mail</label>
+                                        <input formControlName="email" type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input formControlName="tel" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Sujet</label>
+                                        <input  formControlName="subj" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Message...</label>
+                                        <textarea formControlName="message" class="form-control" cols="30" rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="checkme">
+                                        <label class="form-check-label" for="checkme">
+                                            Acceptez les <a routerLink="/terms-conditions">Conditions d'utilisation</a> et la <a routerLink="/privacy-policy">Politique de confidentialité</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <button (click)="subscribe()" type="submit" class="default-btn"><i class="far fa-paper-plane"></i> Envoyer le message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 p-0">
+                    <div class="contact-info">
+                        <h3>Coordonnées</h3>
+                        <ul class="info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Paris, Seaholme VIC 3018, France
+                            </li>
+                            <li>
+                                <i class="fas fa-mobile-alt"></i>
+                                <a href="tel:+33757137304">+33 757137304</a>
+                            </li>
+                            <li>
+                                <i class="far fa-envelope"></i>
+                                <a href="mailto:hello@elgame.com">hello@elgame.com</a>
+                            </li>
+                        </ul>
+                        <!--
+                        <h3>Suivez nous</h3>
+                        <ul class="social-links">
+                            <li><a href="#" target="_blank">Facebook</a></li>
+                            <li><a href="#" target="_blank">Twitter</a></li>
+                            <li><a href="#" target="_blank">Instagram</a></li>
+                            <li><a href="#" target="_blank">Pinterest</a></li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

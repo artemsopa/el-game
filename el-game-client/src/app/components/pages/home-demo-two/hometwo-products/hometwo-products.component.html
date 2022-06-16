@@ -1,0 +1,540 @@
+<div class="products-area pb-70">
+    <div class="container">
+        <div class="section-title style-two">
+            <h2>New Arrival Products</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+        <div class="products-tabs">
+            <ngx-tabset>
+                <ngx-tab tabTitle="ALL">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let content of products">
+                            <div class="single-products-item">
+                                <div class="image">
+                                    <a
+                                        [routerLink]="['/products', content.slug]"
+                                        class="d-block"
+                                    >
+                                        <img
+                                            [src]="content.frontImg.url"
+                                            alt="products-image"
+                                        />
+                                    </a>
+                                    <ul class="products-button">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                (click)="
+                                                    triggerModal(modalData);
+                                                    addToModal(content)
+                                                "
+                                            >
+                                                <i class="fas fa-search-plus"></i>
+                                                <span class="tooltip-label">
+                                                    Quick View
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/compare">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                <span class="tooltip-label">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/wishlist">
+                                                <i class="far fa-heart"></i>
+                                                <span class="tooltip-label">
+                                                    Add to Wishlist
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <span class="sale" *ngIf="content.onSell">
+                                        SALE
+                                    </span>
+                                    <span class="out-of-stock" *ngIf="content.outOfStock">
+                                        Out of Stock
+                                    </span>
+                                    <span class="hot" *ngIf="content.hot">HOT</span>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a [routerLink]="['/products', content.slug]">
+                                            {{ content.title }}
+                                        </a>
+                                    </h3>
+                                    <button
+                                        class="add-to-cart-btn"
+                                        (click)="addToCart(content)"
+                                    >
+                                        Add to cart <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                    <div class="price">
+                                        <span class="old-price" *ngIf="content.oldPrice">
+                                            {{ content.currencyType }}{{ content.oldPrice }}
+                                        </span>
+                                        <span class="new-price">
+                                            {{ content.currencyType }}{{ content.currentPrice }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+                <ngx-tab tabTitle="MANS">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let content of products">
+                            <div class="single-products-item">
+                                <div class="image">
+                                    <a
+                                        [routerLink]="['/products', content.slug]"
+                                        class="d-block"
+                                    >
+                                        <img
+                                            [src]="content.frontImg.url"
+                                            alt="products-image"
+                                        />
+                                    </a>
+                                    <ul class="products-button">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                (click)="
+                                                    triggerModal(modalData);
+                                                    addToModal(content)
+                                                "
+                                            >
+                                                <i class="fas fa-search-plus"></i>
+                                                <span class="tooltip-label">
+                                                    Quick View
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/compare">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                <span class="tooltip-label">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/wishlist">
+                                                <i class="far fa-heart"></i>
+                                                <span class="tooltip-label">
+                                                    Add to Wishlist
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <span class="sale" *ngIf="content.onSell">
+                                        SALE
+                                    </span>
+                                    <span class="out-of-stock" *ngIf="content.outOfStock">
+                                        Out of Stock
+                                    </span>
+                                    <span class="hot" *ngIf="content.hot">HOT</span>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a [routerLink]="['/products', content.slug]">
+                                            {{ content.title }}
+                                        </a>
+                                    </h3>
+                                    <button
+                                        class="add-to-cart-btn"
+                                        (click)="addToCart(content)"
+                                    >
+                                        Add to cart <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                    <div class="price">
+                                        <span class="old-price" *ngIf="content.oldPrice">
+                                            {{ content.currencyType }}{{ content.oldPrice }}
+                                        </span>
+                                        <span class="new-price">
+                                            {{ content.currencyType }}{{ content.currentPrice }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+                <ngx-tab tabTitle="WOMANS">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let content of products">
+                            <div class="single-products-item">
+                                <div class="image">
+                                    <a
+                                        [routerLink]="['/products', content.slug]"
+                                        class="d-block"
+                                    >
+                                        <img
+                                            [src]="content.frontImg.url"
+                                            alt="products-image"
+                                        />
+                                    </a>
+                                    <ul class="products-button">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                (click)="
+                                                    triggerModal(modalData);
+                                                    addToModal(content)
+                                                "
+                                            >
+                                                <i class="fas fa-search-plus"></i>
+                                                <span class="tooltip-label">
+                                                    Quick View
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/compare">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                <span class="tooltip-label">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/wishlist">
+                                                <i class="far fa-heart"></i>
+                                                <span class="tooltip-label">
+                                                    Add to Wishlist
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <span class="sale" *ngIf="content.onSell">
+                                        SALE
+                                    </span>
+                                    <span class="out-of-stock" *ngIf="content.outOfStock">
+                                        Out of Stock
+                                    </span>
+                                    <span class="hot" *ngIf="content.hot">HOT</span>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a [routerLink]="['/products', content.slug]">
+                                            {{ content.title }}
+                                        </a>
+                                    </h3>
+                                    <button
+                                        class="add-to-cart-btn"
+                                        (click)="addToCart(content)"
+                                    >
+                                        Add to cart <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                    <div class="price">
+                                        <span class="old-price" *ngIf="content.oldPrice">
+                                            {{ content.currencyType }}{{ content.oldPrice }}
+                                        </span>
+                                        <span class="new-price">
+                                            {{ content.currencyType }}{{ content.currentPrice }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+                <ngx-tab tabTitle="CLOTH">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let content of products">
+                            <div class="single-products-item">
+                                <div class="image">
+                                    <a
+                                        [routerLink]="['/products', content.slug]"
+                                        class="d-block"
+                                    >
+                                        <img
+                                            [src]="content.frontImg.url"
+                                            alt="products-image"
+                                        />
+                                    </a>
+                                    <ul class="products-button">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                (click)="
+                                                    triggerModal(modalData);
+                                                    addToModal(content)
+                                                "
+                                            >
+                                                <i class="fas fa-search-plus"></i>
+                                                <span class="tooltip-label">
+                                                    Quick View
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/compare">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                <span class="tooltip-label">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/wishlist">
+                                                <i class="far fa-heart"></i>
+                                                <span class="tooltip-label">
+                                                    Add to Wishlist
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <span class="sale" *ngIf="content.onSell">
+                                        SALE
+                                    </span>
+                                    <span class="out-of-stock" *ngIf="content.outOfStock">
+                                        Out of Stock
+                                    </span>
+                                    <span class="hot" *ngIf="content.hot">HOT</span>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a [routerLink]="['/products', content.slug]">
+                                            {{ content.title }}
+                                        </a>
+                                    </h3>
+                                    <button
+                                        class="add-to-cart-btn"
+                                        (click)="addToCart(content)"
+                                    >
+                                        Add to cart <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                    <div class="price">
+                                        <span class="old-price" *ngIf="content.oldPrice">
+                                            {{ content.currencyType }}{{ content.oldPrice }}
+                                        </span>
+                                        <span class="new-price">
+                                            {{ content.currencyType }}{{ content.currentPrice }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+                <ngx-tab tabTitle="BAG">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let content of products">
+                            <div class="single-products-item">
+                                <div class="image">
+                                    <a
+                                        [routerLink]="['/products', content.slug]"
+                                        class="d-block"
+                                    >
+                                        <img
+                                            [src]="content.frontImg.url"
+                                            alt="products-image"
+                                        />
+                                    </a>
+                                    <ul class="products-button">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                (click)="
+                                                    triggerModal(modalData);
+                                                    addToModal(content)
+                                                "
+                                            >
+                                                <i class="fas fa-search-plus"></i>
+                                                <span class="tooltip-label">
+                                                    Quick View
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/compare">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                <span class="tooltip-label">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/wishlist">
+                                                <i class="far fa-heart"></i>
+                                                <span class="tooltip-label">
+                                                    Add to Wishlist
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <span class="sale" *ngIf="content.onSell">
+                                        SALE
+                                    </span>
+                                    <span class="out-of-stock" *ngIf="content.outOfStock">
+                                        Out of Stock
+                                    </span>
+                                    <span class="hot" *ngIf="content.hot">HOT</span>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a [routerLink]="['/products', content.slug]">
+                                            {{ content.title }}
+                                        </a>
+                                    </h3>
+                                    <button
+                                        class="add-to-cart-btn"
+                                        (click)="addToCart(content)"
+                                    >
+                                        Add to cart <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                    <div class="price">
+                                        <span class="old-price" *ngIf="content.oldPrice">
+                                            {{ content.currencyType }}{{ content.oldPrice }}
+                                        </span>
+                                        <span class="new-price">
+                                            {{ content.currencyType }}{{ content.currentPrice }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+                <ngx-tab tabTitle="SHOE">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let content of products">
+                            <div class="single-products-item">
+                                <div class="image">
+                                    <a
+                                        [routerLink]="['/products', content.slug]"
+                                        class="d-block"
+                                    >
+                                        <img
+                                            [src]="content.frontImg.url"
+                                            alt="products-image"
+                                        />
+                                    </a>
+                                    <ul class="products-button">
+                                        <li>
+                                            <button
+                                                type="button"
+                                                (click)="
+                                                    triggerModal(modalData);
+                                                    addToModal(content)
+                                                "
+                                            >
+                                                <i class="fas fa-search-plus"></i>
+                                                <span class="tooltip-label">
+                                                    Quick View
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/compare">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                <span class="tooltip-label">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/wishlist">
+                                                <i class="far fa-heart"></i>
+                                                <span class="tooltip-label">
+                                                    Add to Wishlist
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <span class="sale" *ngIf="content.onSell">
+                                        SALE
+                                    </span>
+                                    <span class="out-of-stock" *ngIf="content.outOfStock">
+                                        Out of Stock
+                                    </span>
+                                    <span class="hot" *ngIf="content.hot">HOT</span>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a [routerLink]="['/products', content.slug]">
+                                            {{ content.title }}
+                                        </a>
+                                    </h3>
+                                    <button
+                                        class="add-to-cart-btn"
+                                        (click)="addToCart(content)"
+                                    >
+                                        Add to cart <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                    <div class="price">
+                                        <span class="old-price" *ngIf="content.oldPrice">
+                                            {{ content.currencyType }}{{ content.oldPrice }}
+                                        </span>
+                                        <span class="new-price">
+                                            {{ content.currencyType }}{{ content.currentPrice }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+            </ngx-tabset>
+        </div>
+    </div>
+</div>
+
+<ng-template #modalData let-modal>
+    <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+    >
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="modal-body" *ngIf="modalProduct">
+        <div
+            class="row align-items-center"
+            *ngFor="let product of modalProduct;"
+        >
+            <div class="col-lg-6 col-md-6">
+                <div class="image">
+                    <img [src]="product.frontImg.url" alt="image" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="content">
+                    <h3>{{ product.title }}</h3>
+                    <div class="price">
+                        <span class="new-price">
+                            {{ product.currencyType }}{{ product.currentPrice }}
+                        </span>
+                        <span class="old-price" *ngIf="product.oldPrice">
+                            {{ product.currencyType }}{{ product.oldPrice }}
+                        </span>
+                    </div>
+                    <p>{{ product.shortDesc }}</p>
+                    <ul class="products-info">
+                        <li>
+                            <span>Vendor:</span>
+                            <a routerLink="/shop-full-width-1">{{ product.vendor }}</a>
+                        </li>
+                        <li *ngIf="product.inStock">
+                            <span>Availability:</span> 
+                            In stock
+                        </li>
+                        <li>
+                            <span>Categories:</span>
+                            <a routerLink="/shop-full-width-1">Hoodie</a>
+                        </li>
+                    </ul>
+                    <div class="products-add-to-cart">
+                        <button
+                            (click)="addToCart(product)"
+                            type="submit"
+                            class="default-btn"
+                        >
+                            <i class="fas fa-shopping-bag"></i> ADD TO CART
+                        </button>
+                        <a
+                            routerLink="/wishlist"
+                            title="Add to Wishlist"
+                            class="add-to-wishlist-btn"
+                            ><i class="far fa-heart"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

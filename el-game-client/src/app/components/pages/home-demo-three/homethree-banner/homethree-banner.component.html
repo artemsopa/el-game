@@ -1,0 +1,46 @@
+<div class="home-area" *ngFor="let Content of bgImage;" style="background-image: url({{Content.img}});">
+    <div class="container-fluid">
+        <div class="home-slides">
+            <owl-carousel-o [options]="homeSlides">
+                <ng-template carouselSlide>
+                    <div class="banner-item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-md-12">
+                                <div class="content">
+                                    <span class="sub-title">Nouvelle Inspiration!</span>
+                                    <h1>Apple iPhone<br>13 Pro Max</h1>
+                                    <p>Spécial pour vous action 20%</p>
+                                    <a routerLink="/products/iphone-13-pro-max-silver" class="default-btn"><i class="fas fa-store"></i> ACHETEZ MAINTENANT</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="image">
+                                    <img src="https://electr-france.com/image/cache/catalog/Smarfhone/018/iphone-12-pro-max-silver-hero-760x1000.png" alt="banner-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="banner-item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-md-12">
+                                <div class="content">
+                                    <span class="sub-title">Nouvelle Arrivée 21/22!</span>
+                                    <h1>SONY <br> PlayStation 5</h1>
+                                    <p>Une des consoles les plus puissantes</p>
+                                    <a routerLink="/products/ps-5" class="default-btn"><i class="fas fa-store"></i>ACHETEZ MAINTENANT</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="image">
+                                    <img src="https://cticellular.com/wp-content/uploads/2021/02/playstation-5-digital-edition-with-dualsense-front-product-shot-01-ps5-en-30jul20.png" alt="banner-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

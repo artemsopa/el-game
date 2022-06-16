@@ -1,0 +1,197 @@
+<!-- Top Header -->
+<div class="top-header-area" [ngClass]="{'d-none' : router?.url === '/index-2'}">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <p>Livraison Gratuite à Partir de €10 Vers la Majeure Partie de la France*</p>
+            </div>
+            <!--<div class="col-lg-6 col-md-6">
+                <div class="top-header-info">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <ul class="social-links">
+                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li>EUR</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+<!-- Navbar -->
+<div 
+    class="navbar-area" 
+    ngStickyNav 
+    stickyClass="sticky-box-shadow" 
+    ngStickyNav 
+    [ngClass]="{'bg-f9f9f9' : router?.url === '/'}"
+>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" [class.active]="classApplied">
+            <a class="navbar-brand" routerLink="/" style="font-size: 30px;"><strong>EL-GAME</strong></a>
+            <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                <span class="burger-menu">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a routerLink="/" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" class="nav-link">ACCUEIL</a></li>
+                    <li class="nav-item megamenu"><a href="javascript:void(0)" class="dropdown-toggle nav-link">MAGASIN</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="submenu-title">CONSOLES</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/play-station" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">PlayStation</a></li>
+                                        </ul>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/xbox" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Xbox</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="submenu-title">COMPOSANTS PC</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/vc" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Cartes Vidéo</a></li>
+                                        </ul>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/cpu" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">CPU</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="nav-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="submenu-title">SMARTPHONES</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/apple" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">iPhone</a></li>
+                                            <li><a routerLink="/samsung" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Samsung</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="submenu-title">PORTABLES</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/apple-laptop" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">MacBook</a></li>
+                                            <li><a routerLink="/asus-laptop" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">ASUS</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+            
+                        </ul>
+                        
+                        
+                    </li>
+                    <li class="nav-item"><a href="javascript:void(0)" class="dropdown-toggle nav-link">INFO</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a routerLink="/about" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" class="nav-link">À propos de nous</a></li>
+                            <li class="nav-item"><a routerLink="/faq" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" class="nav-link">FAQ</a></li>
+                            <li class="nav-item"><a routerLink="/delivery-returns" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" class="nav-link">Politique de retour de livraison</a></li>
+                            <li class="nav-item"><a routerLink="/privacy-policy" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" class="nav-link">Politique de confidentialité</a></li>
+                            <li class="nav-item"><a routerLink="/terms-conditions" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" class="nav-link">Termes et conditions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a routerLink="/contact" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" class="nav-link">CONTACT</a></li>
+                </ul>
+                <ul class="navbar-nav for-responsive">
+                    <li class="nav-item"><a routerLink="/" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">ACCUEIL</a></li>
+                    <li class="nav-item megamenu"><a href="javascript:void(0)" class="dropdown-toggle nav-link">MAGASIN</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="submenu-title">CONSOLES</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/play-station" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">PlayStation</a></li>
+                                        </ul>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/xbox" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}"  (click)="toggleClass()" class="nav-link">Xbox</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="nav-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="submenu-title">SMARTPHONES</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/apple" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">iPhone</a></li>
+                                        
+                                            <li><a routerLink="/samsung" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">Samsung</a></li>
+                                        
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="nav-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="submenu-title">PORTABLES</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/apple-laptop" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">MacBook</a></li>
+                                            <li><a routerLink="/asus-laptop" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">ASUS</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="nav-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="submenu-title">COMPOSANTS PC</h6>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/vc" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}"  (click)="toggleClass()" class="nav-link">Cartes Vidéo</a></li>
+                                        </ul>
+                                        <ul class="megamenu-submenu">
+                                            <li><a routerLink="/cpu" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">CPU</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>   
+                    </li>
+                    <li class="nav-item"><a href="javascript:void(0)" class="dropdown-toggle nav-link">INFO</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a routerLink="/about" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">À propos de nous</a></li>
+                            <li class="nav-item"><a routerLink="/faq" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">FAQ</a></li>
+                            <li class="nav-item"><a routerLink="/delivery-returns" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">Politique de retour de livraison</a></li>
+                            <li class="nav-item"><a routerLink="/privacy-policy" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">Politique de confidentialité</a></li>
+                            <li class="nav-item"><a routerLink="/terms-conditions" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">Termes et conditions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a routerLink="/contact" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()" class="nav-link">CONTACT</a></li>
+                </ul>
+                <div class="others-option d-flex align-items-center">
+                    <div class="option-item">
+                        <div class="search-box">
+                            <input type="text" class="input-search" placeholder="Rechercher"
+                            [(ngModel)]="title" (ngModelChange)="Search()">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="option-item">
+                        <a routerLink="/profile" class="user-account"><i class="far fa-user" (click)="toggleClass()"></i></a>
+                    </div>
+                    <div class="option-item">
+                        <a routerLink="/cart" class="cart-btn" (click)="toggleClass()">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>{{ cartProducts.length }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
